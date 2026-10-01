@@ -319,7 +319,7 @@ with t3:
     st.markdown('<div class="section-title">Cliente · mezcla de ingresos M3</div>', unsafe_allow_html=True)
     left, right = st.columns([1.1, 1.5], gap="large")
     with left:
-        st.plotly_chart(mix_chart(), use_container_width=True, config={"displayModeBar": False})
+        st.plotly_chart(mix_chart(), use_container_width=True, config={"displayModeBar": False}, key="mix_cliente")
     with right:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("**Composición del ingreso mensual M3**")
@@ -342,7 +342,7 @@ with t4:
     left, right = st.columns([1.1, 1.5], gap="large")
     with left:
         st.markdown('<div class="section-title">Mezcla de ingresos M3</div>', unsafe_allow_html=True)
-        st.plotly_chart(mix_chart(), use_container_width=True, config={"displayModeBar": False})
+        st.plotly_chart(mix_chart(), use_container_width=True, config={"displayModeBar": False}, key="mix_operacion")
     with right:
         st.markdown('<div class="section-title">Plan de choque · estatus</div>', unsafe_allow_html=True)
         st.dataframe(PLAN_CHOQUE, hide_index=True, use_container_width=True)
